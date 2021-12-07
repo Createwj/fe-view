@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .flex-box {
+      border: 1px solid #000000;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .item1 {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #4fc08d;
+      align-self: flex-start;
+    }
+    .item2 {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #4fc08d;
+      align-self: center;
+    }
+    .item3 {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #4fc08d;
+      align-self: flex-end;
+    }
+    .float-box {
+      border: 1px solid #000;
+      position: absolute;
+    }
+    .text-box {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-box">
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+  </div>
+<div class="float-box">
+  <p class="text-box">23</p>
+  <p class="text-box">23</p>
+</div>
+</body>
+</html>
