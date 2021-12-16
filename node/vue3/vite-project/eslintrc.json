@@ -1,0 +1,4 @@
+
+    "rules": {
+        "semi": ["warn","never"]
+    }

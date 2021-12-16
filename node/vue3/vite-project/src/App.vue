@@ -5,3 +5,11 @@
   </div>
   <router-view></router-view>
 </template>
+<script setup>
+
+function fib(n){
+  if(n<=1) return 1
+  return fib(n-1)+fib(n-2)
+}
+let count = ref(fib(38))
+</script>
