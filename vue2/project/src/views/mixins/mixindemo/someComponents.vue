@@ -10,6 +10,11 @@ export default {
     return {
       value: '123'
     }
-  }
+  },
+  mounted(){
+    setTimeout(()=>{
+      this.value = 1132
+    }, 2000)
+  },
 }
 </script>
