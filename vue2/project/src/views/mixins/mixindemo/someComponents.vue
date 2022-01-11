@@ -5,7 +5,9 @@
 import CustomInput from './CustomInput.vue'
   
 export default {
-  components: { CustomInput },
+  components: { 
+    CustomInput 
+  },
   data() {
     return {
       value: '123'
