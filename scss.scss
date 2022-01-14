@@ -1,0 +1,79 @@
+// 变量 
+$size: 1px;
+$primary: rgb(98,40,240);
+$flex: 'flex';
+$bor_1px: $size solid $primary;
+$text: 'font';
+
+.box {
+  	display: $flex;
+    color: $primary;
+    border: $bor_1px;
+}
+.#{$text}-size {
+    #{$text}-size: 12px;
+}
+
+
+@mixin clearfix {
+    display: inline-block;
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+}
+
+.dec_box {
+    @include clearfix();
+}
+
+
+.error {
+    border: 1px #f00;
+    background-color: #fdd;
+}
+.seriousError {
+   @extend .error;
+   border-width: 3px;
+}
+
+
+
+
+$top: 'top';
+$right: 'right';
+$bottom: 'bottom';
+$left: 'left';
+
+
+@mixin border-bottom-1px($color) {
+    position: relative;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+      &::after {
+        transform: scaleY(0.7);
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid $color;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+      &::after {
+        transform: scaleY(0.5);
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid $color;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+ 

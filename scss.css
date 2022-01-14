@@ -1,0 +1,31 @@
+.box {
+  display: "flex";
+  color: #6228f0;
+  border: 1px solid #6228f0;
+}
+
+.font-size {
+  font-size: 12px;
+}
+
+.dec_box {
+  display: inline-block;
+}
+.dec_box:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+
+.seriousError {
+  border-width: 3px;
+}
+
+/*# sourceMappingURL=scss.css.map */

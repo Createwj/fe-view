@@ -1,12 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+import routess from './routes/home'
+console.log(1132)
+console.log(routess)
+
 const importRoutes = require.context('./routes', false, /\.js$/)
+console.log(importRoutes.keys())
 
 const routes = importRoutes
   .keys()
   .reduce((routesArr, path) => routesArr.concat(importRoutes(path).default), [])
 
+  console.log(routes)
+
+// require.context
 
 const router = new VueRouter({
     mode: 'history',
